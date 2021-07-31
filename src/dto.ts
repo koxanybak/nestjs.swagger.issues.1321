@@ -5,9 +5,6 @@ export class InfoPostDTO {
     name: string;
 }
 export class InfoPutDTO extends InfoPostDTO {
-    constructor() {
-        super();
-    }
     @ApiProperty()
     id: number;
 }
@@ -20,9 +17,6 @@ export class EntityPostDTO {
     info: InfoPostDTO;
 }
 export class EntityPutDTO extends EntityPostDTO {
-    constructor() {
-        super();
-    }
     @ApiProperty()
     info: InfoPutDTO;
 }

@@ -7,7 +7,7 @@ import { EntityPostDTO, EntityPutDTO } from './dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get("/put")
   @ApiResponse({
     status: 200,
     type: EntityPutDTO,
@@ -16,7 +16,7 @@ export class AppController {
     return this.appService.getPut();
   }
 
-  @Get()
+  @Get("/post")
   @ApiResponse({
     status: 200,
     type: EntityPostDTO,
